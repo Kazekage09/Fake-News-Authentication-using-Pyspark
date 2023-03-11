@@ -6,4 +6,3 @@ Pillow==9.4.0
 pyspark==3.3.2
 streamlit==1.19.0
 streamlit_lottie==0.0.3
-conda==4.9.2
