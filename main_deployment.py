@@ -19,11 +19,10 @@ from pyspark.ml.classification import FMClassifier, FMClassificationModel
 from pyspark.sql import SparkSession
 from pyspark.ml.classification import LinearSVCModel
 
-
+import findspark
+findspark.init()
 spark = SparkSession.builder \
     .appName("my_app_name") \
-    .config("spark.driver.memory", "8g") \
-    .config("spark.executor.memory", "8g") \
     .getOrCreate()
    
 
