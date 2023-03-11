@@ -22,8 +22,8 @@ from pyspark.ml.classification import LinearSVCModel
 import os
 
 # Setting up environment variables
-os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
-os.environ["SPARK_HOME"] = "/content/spark-3.0.2-bin-hadoop2.7"
+os.environ["JAVA_HOME"] = "java-8-openjdk-amd64"
+os.environ["SPARK_HOME"] = "spark-3.0.2-bin-hadoop2.7"
 
 # Initialize findspark
 import findspark
