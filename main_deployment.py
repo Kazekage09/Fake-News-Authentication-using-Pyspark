@@ -19,6 +19,15 @@ from pyspark.ml.classification import FMClassifier, FMClassificationModel
 from pyspark.sql import SparkSession
 from pyspark.ml.classification import LinearSVCModel
 
+import os
+
+# Setting up environment variables
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+os.environ["SPARK_HOME"] = "/content/spark-3.0.2-bin-hadoop2.7"
+
+# Initialize findspark
+import findspark
+findspark.init()
 import findspark
 findspark.init()
 spark = SparkSession.builder \
