@@ -6,3 +6,5 @@ pyspark==3.3.2
 streamlit==1.19.0
 streamlit_lottie==0.0.3
 findspark==2.0.1
+openjdk-8-jdk-headless
+wget
