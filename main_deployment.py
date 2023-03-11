@@ -20,13 +20,22 @@ from pyspark.sql import SparkSession
 from pyspark.ml.classification import LinearSVCModel
 
 
-# Initialize findspark
-import findspark
-findspark.init()
+from pyspark import SparkConf
 
-spark = SparkSession.builder \
-    .appName("my_app_name") \
-    .getOrCreate()
+def _initialize_spark() -> SparkSession:
+    """Create a Spark Session for Streamlit app"""
+    conf = SparkConf().setAppName("app").setMaster("local")
+    spark = SparkSession.builder.config(conf=conf).getOrCreate()
+    return spark, spark.sparkContext
+spark, _ = _initialize_spark()
+
+# # Initialize findspark
+# import findspark
+# findspark.init()
+
+# spark = SparkSession.builder \
+#     .appName("my_app_name") \
+#     .getOrCreate()
    
 
 
