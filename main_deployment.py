@@ -20,9 +20,10 @@ from pyspark.sql import SparkSession
 from pyspark.ml.classification import LinearSVCModel
 
 
-
 spark = SparkSession.builder \
     .appName("my_app_name") \
+    .config("spark.driver.memory", "8g") \
+    .config("spark.executor.memory", "8g") \
     .getOrCreate()
    
 
