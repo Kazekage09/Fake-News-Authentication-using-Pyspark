@@ -28,8 +28,7 @@ os.environ["SPARK_HOME"] = "/content/spark-3.0.2-bin-hadoop2.7"
 # Initialize findspark
 import findspark
 findspark.init()
-import findspark
-findspark.init()
+
 spark = SparkSession.builder \
     .appName("my_app_name") \
     .getOrCreate()
